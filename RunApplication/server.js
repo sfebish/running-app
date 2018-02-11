@@ -10,6 +10,7 @@ import userModel from './models/userModel';
 // Routes
 import userRouter from './routes/users';
 
+// Creating Express App
 const app = express();
 
 // allow-cors
