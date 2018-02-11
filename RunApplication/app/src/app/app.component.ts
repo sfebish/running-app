@@ -8,4 +8,9 @@ import { ActivatedRoute, Routes } from '@angular/router';
 })
 export class AppComponent {
   title = 'app';
+  sideBarIsExpanded = false;
+
+  toggleSidebar() {
+    this.sideBarIsExpanded = !this.sideBarIsExpanded;
+  }
 }

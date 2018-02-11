@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatMenuModule, MatToolbarModule, MatIconModule, MatListModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatSidenavModule} from '@angular/material';
 import { UsersComponent, UsersComponentDialog } from './users/users.component';
 import { RunsComponent } from './runs/runs.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RunsComponent } from './runs/runs.component';
     HomePageComponent,
     UsersComponent,
     UsersComponentDialog,
-    RunsComponent
+    RunsComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

@@ -22,5 +22,17 @@
       }
 
         .app-body mat-sidenav-container nav button span {
-          padding: 0 15px;
+          padding-right: 15px;
         }
+
+        .app-body mat-sidenav-container nav button mat-icon {
+          margin: 0 5px;
+        }
+
+      .app-body mat-sidenav-container nav .expand-side {
+        width: 40px;
+      }
+
+mat-sidenav-content {
+  padding: 15px;
+}

@@ -61,6 +61,8 @@
     <Content Include="app\README.md" />
     <Content Include="app\src\app\app.component.css" />
     <Content Include="app\src\app\app.component.html" />
+    <Content Include="app\src\app\blog\blog.component.css" />
+    <Content Include="app\src\app\blog\blog.component.html" />
     <Content Include="app\src\app\home.component.css" />
     <Content Include="app\src\app\home.component.html" />
     <Content Include="app\src\app\runs\runs.component.css" />
@@ -74,18 +76,21 @@
     <Content Include="app\src\favicon.ico" />
     <Content Include="app\src\index.html" />
     <Content Include="app\src\styles.css" />
+    <Content Include="app\src\run-app-theme.scss">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="app\src\tsconfig.app.json" />
     <Content Include="app\src\tsconfig.spec.json" />
     <Content Include="app\tsconfig.json" />
     <Content Include="app\tslint.json" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\e2e\" />
     <Folder Include="app\src\" />
     <Folder Include="app\src\app\" />
+    <Folder Include="app\src\app\blog\" />
     <Folder Include="app\src\app\runs\" />
     <Folder Include="app\src\app\users\" />
     <Folder Include="app\src\assets\" />
@@ -103,6 +108,8 @@
     <TypeScriptCompile Include="app\src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\src\app\app.component.ts" />
     <TypeScriptCompile Include="app\src\app\app.module.ts" />
+    <TypeScriptCompile Include="app\src\app\blog\blog.component.spec.ts" />
+    <TypeScriptCompile Include="app\src\app\blog\blog.component.ts" />
     <TypeScriptCompile Include="app\src\app\entity.service.spec.ts" />
     <TypeScriptCompile Include="app\src\app\entity.service.ts" />
     <TypeScriptCompile Include="app\src\app\home.component.ts" />
