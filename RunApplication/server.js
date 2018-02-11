@@ -49,4 +49,5 @@ app.get('/', (req, res) => {
     res.end('API Working');
 });
 
+// start node application.
 app.listen(port, () => console.log('App Server Listening at ', port));
