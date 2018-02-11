@@ -36,6 +36,7 @@ passport.use(new Strategy(userModel.authenticate()));
 passport.serializeUser(userModel.serializeUser());
 passport.deserializeUser(userModel.deserializeUser());
 
+// set port for node process to use.
 const port = process.env.PORT || 8080;
 
 // add source map support
