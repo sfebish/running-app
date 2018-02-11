@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content>
+  <section class="input-row">
+    <mat-form-field class="input-field">
+      <input matInput placeholder="First Name" [(ngModel)]="data.user.firstName"/>
+    </mat-form-field>
+    <mat-form-field class="input-field">
+      <input matInput placeholder="Last Name" [(ngModel)]="data.user.lastName"/>
+    </mat-form-field>
+  </section>
+  <section class="input-row">
+    <mat-form-field>
+      <input matInput placeholder="Email Address" [(ngModel)]="data.user.email" />
+    </mat-form-field>
+  </section>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true">Save</button>
+</div>

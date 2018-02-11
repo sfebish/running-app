@@ -1,0 +1,55 @@
+<!--<mat-toolbar color="primary">
+  <span>Run Application</span>
+  <nav mat-tab-nav-bar>
+    <button mat-icon-button mat-tab-link routerLink="">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button mat-tab-link routerLink="users">
+      <mat-icon>people</mat-icon>
+    </button>
+    <button mat-icon-button mat-tab-link routerLink="runs">
+      <mat-icon>directions_run</mat-icon>
+    </button>
+  </nav>
+  <span class="nav-spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+</mat-menu>
+<router-outlet></router-outlet>-->
+
+<div class="mat-app-background">
+  <mat-toolbar color="primary">
+    <span>Run Application</span>
+  </mat-toolbar>
+  <div class="app-body">
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #snav opened disableClose mode="side">
+        <nav mat-tab-nav-bar>
+          <button mat-icon-button mat-tab-link routerLink="">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </button>
+          <button mat-icon-button mat-tab-link routerLink="users">
+            <mat-icon>people</mat-icon>
+            <span>Users</span>
+          </button>
+          <button mat-icon-button mat-tab-link routerLink="runs">
+            <mat-icon>directions_run</mat-icon>
+            <span>Runs</span>
+          </button>
+          <button mat-icon-button class="expand-side">
+            <mat-icon>code</mat-icon>
+          </button>
+        </nav>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>

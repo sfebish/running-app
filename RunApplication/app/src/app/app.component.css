@@ -1,0 +1,26 @@
+.nav-spacer {
+  flex: 1 1 auto;
+}
+
+.app-body {
+  position: absolute;
+  height: calc(100% - 64px);
+  width: 100%;
+}
+
+  .app-body mat-sidenav-container {
+    height: 100%;
+  }
+
+    .app-body mat-sidenav-container nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+      .app-body mat-sidenav-container nav button {
+        width: auto;
+      }
+
+        .app-body mat-sidenav-container nav button span {
+          padding: 0 15px;
+        }

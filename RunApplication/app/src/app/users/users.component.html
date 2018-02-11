@@ -1,0 +1,9 @@
+<h2>Users</h2>
+<button class="add-user-btn" mat-icon-button (click)="openDialog(false)"><mat-icon>person_add</mat-icon></button>
+<mat-list>
+  <mat-list-item *ngFor="let user of users">
+    <mat-icon mat-list-icon>Person</mat-icon>
+    <h4 mat-line>{{user.firstName}} {{user.lastName}}</h4>
+    <p mat-line>{{user.email}}</p>
+  </mat-list-item>
+</mat-list>
