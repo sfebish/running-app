@@ -79,6 +79,9 @@
     <Content Include="app\src\run-app-theme.scss">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="app\src\styles.scss">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="app\src\tsconfig.app.json" />
     <Content Include="app\src\tsconfig.spec.json" />
     <Content Include="app\tsconfig.json" />
