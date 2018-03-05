@@ -64,6 +64,21 @@
     <Compile Include="services\users.service.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test\hooks.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\repository\users.repository.test.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test.helpers.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tools\testRunner.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tools\testRunner_hooked.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Content Include="app\.angular-cli.json" />
     <Content Include="app\.editorconfig" />
     <Content Include="app\.gitignore" />
@@ -108,6 +123,9 @@
     <Folder Include="app\src\assets\" />
     <Folder Include="app\src\environments\" />
     <Folder Include="models\" />
+    <Folder Include="test\" />
+    <Folder Include="test\repository\" />
+    <Folder Include="tools\" />
     <Folder Include="repositories\" />
     <Folder Include="services\" />
     <Folder Include="server\" />

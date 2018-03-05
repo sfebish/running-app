@@ -45,4 +45,9 @@ export class BaseRepository {
     deleteEntity(id) {
         return this.model.findByIdAndRemove(id).exec();
     }
+
+    // Empty collection of all items
+    clearCollection() {
+        return this.model.remove().exec();
+    }
 }
