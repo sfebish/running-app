@@ -27,3 +27,9 @@ npm run start-dev
 npm start
 ```
 ** Note - This will not start the client through webpack
+
+## Unit Tests
+### Prior to creating any pull requests, make sure all unit tests pass
+```
+npm run test
+```
