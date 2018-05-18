@@ -1,4 +1,5 @@
 ﻿'use strict';
+// setup 3rd party libraries
 import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
@@ -16,6 +17,7 @@ logger.info('Starting Server...');
 import userRouter from './routes/users';
 import logRouter from './routes/logs';
 
+// Creating Express App
 const app = express();
 
 // allow-cors
@@ -41,6 +43,7 @@ passport.use(new Strategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// set port for node process to use.
 const port = process.env.PORT || 8080;
 
 // add source map support
@@ -53,6 +56,7 @@ app.get('/', (req, res) => {
     res.end('API Working');
 });
 
+// start node application.
 app.listen(port, () => console.log('App Server Listening at ', port));
 
 export default app;
