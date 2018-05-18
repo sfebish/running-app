@@ -2,14 +2,12 @@
 import passportLocalMongoose from 'passport-local-mongoose';
 
 const schema = mongoose.Schema({
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
     firstName: String,
     lastName: String,
     birthdate: Date,
     permissions: { type: Array, default: [] }
+}, {
+    timestamps: true
 });
 
 const passportOpts = {

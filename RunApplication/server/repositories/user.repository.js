@@ -2,7 +2,7 @@
 import { BaseRepository } from './base.repository';
 
 // Setup the users repository to inherit from the base repo
-export class UsersRepository extends BaseRepository {
+export class UserRepository extends BaseRepository {
     constructor() {
         super(User, bodyToUser);
     }

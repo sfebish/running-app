@@ -46,19 +46,34 @@
     <Compile Include="server\config\configuration.manager.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="server\models\run.model.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server\models\user.model.js" />
     <Compile Include="server\repositories\base.repository.js" />
-    <Compile Include="server\repositories\users.repository.js" />
-    <Compile Include="server\routes\logs.js" />
-    <Compile Include="server\routes\users.js" />
+    <Compile Include="server\repositories\run.repository.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\repositories\user.repository.js" />
+    <Compile Include="server\routes\log.routes.js" />
+    <Compile Include="server\routes\run.routes.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\routes\user.routes.js" />
     <Compile Include="server\server.js" />
     <Compile Include="server\server\customLogger.js" />
     <Compile Include="server\server\databaseConnection.js" />
     <Compile Include="server\server_Hooked.js" />
     <Compile Include="server\services\express.helpers.js" />
     <Compile Include="server\services\logs.service.js" />
+    <Compile Include="server\services\run.service.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server\services\users.service.js" />
     <Compile Include="server\test\hooks.js" />
+    <Compile Include="server\test\repository\run.repository.test.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server\test\repository\users.repository.test.js" />
     <Compile Include="server\test\test.helpers.js" />
     <Compile Include="server\tools\testRunner.js" />

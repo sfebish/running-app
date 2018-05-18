@@ -14,8 +14,9 @@ var logger = customLogger.getLogger('server');
 logger.info('Starting Server...');
 
 // Routes
-import userRouter from './routes/users';
-import logRouter from './routes/logs';
+import userRouter from './routes/user.routes';
+import logRouter from './routes/log.routes';
+import runRouter from './routes/run.routes';
 
 // Creating Express App
 const app = express();
@@ -51,6 +52,7 @@ SourceMapSupport.install();
 
 app.use('/api/users', userRouter);
 app.use('/api/logs', logRouter);
+app.use('/api/runs', runRouter);
 
 app.get('/', (req, res) => {
     res.end('API Working');
