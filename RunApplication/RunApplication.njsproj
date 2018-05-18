@@ -37,6 +37,15 @@
   <ItemGroup>
     <Compile Include="app\karma.conf.js" />
     <Compile Include="app\protractor.conf.js" />
+    <Compile Include="server\config\config.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\config\config.overrides.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="server\config\configuration.manager.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server\models\user.model.js" />
     <Compile Include="server\repositories\base.repository.js" />
     <Compile Include="server\repositories\users.repository.js" />
@@ -100,6 +109,7 @@
     <Folder Include="app\src\environments\" />
     <Folder Include="server\" />
     <Folder Include="server\models\" />
+    <Folder Include="server\config\" />
     <Folder Include="server\public\" />
     <Folder Include="server\repositories\" />
     <Folder Include="server\routes\" />
