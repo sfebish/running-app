@@ -1,7 +1,7 @@
 ﻿import mongoose from '../server/databaseConnection';
 import passportLocalMongoose from 'passport-local-mongoose';
 
-var schema = mongoose.Schema({
+const schema = mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
@@ -9,10 +9,10 @@ var schema = mongoose.Schema({
     firstName: String,
     lastName: String,
     birthdate: Date,
-    permissions: []
+    permissions: { type: Array, default: [] }
 });
 
-var passportOpts = {
+const passportOpts = {
     usernameField: 'email',
     populateFields: ['email']
 }

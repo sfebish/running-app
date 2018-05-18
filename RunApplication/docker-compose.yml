@@ -1,0 +1,20 @@
+version: '3.5' #specify docker-compose file version https://docs.docker.com/compose/compose-file/#compose-and-docker-compatibility-matrix
+
+# Define the services/ containers to be run
+services:
+ angular: # name of the first service
+  build: app # specify the directory of the Dockerfile
+  ports:
+  - "4200:4200" # specify port mapping
+ 
+ express: # name of the second service
+  build: server # specify the directory of the Dockerfile
+  ports:
+  - "8080:8080" #specify ports mapping
+  links:
+  - database # link this service to the database service
+ 
+ database: # name of the third service
+  image: mongo # specify image to build container from
+  ports:
+  - "27017:27017" # specify port forwarding
