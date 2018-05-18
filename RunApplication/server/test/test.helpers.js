@@ -2,13 +2,15 @@
 import _ from 'lodash';
 
 // repositories to import
-import {UsersRepository} from '../repositories/users.repository';
+import { UserRepository } from '../repositories/user.repository';
+import { RunRepository} from '../repositories/run.repository';
 
 const logger = customLogger.getLogger('TestHelper');
 
 // Object to hold each entity repository used in tests
 const entityRepos = {
-    usersRepository: new UsersRepository()
+    usersRepository: new UserRepository(),
+    runRepository: new RunRepository()
 }
 
 // Loops through all repositories from above and deletes all entries from the collection
@@ -16,7 +18,7 @@ export function clearData() {
     return new Promise((resolve, reject) => {
         const promises = [];
 
-        _.forOwn(entityRepos, (value, key) => promises.push(value.clearCollection()));
+        _.forOwn(entityRepos, (value) => promises.push(value.clearCollection()));
 
         logger.info(`clearing ${promises.length} collections`);
 
@@ -32,6 +34,9 @@ export function stageData() {
         const promises = [];
         const user = createUser('test', 'user1', new Date(1980, 1, 1), 'testuser1@test.com');
         promises.push(entityRepos.usersRepository.create(user));
+
+        const run = createRun(9, 99999, new Date(), true);
+        promises.push(entityRepos.runRepository.create(run));
 
         logger.info(`staging ${promises.length} entities for tets`);
         Promise.all(promises)
@@ -49,3 +54,7 @@ function createUser(firstName, lastName, birthdate, email) {
         email: email
     };
 };
+
+function createRun(distance, time, date, isRace) {
+    return { distance, time, date, isRace };
+}

@@ -1,7 +1,7 @@
 ﻿import { handleSuccess, handleError } from './express.helpers';
-import { UsersRepository } from '../repositories/users.repository';
+import { UserRepository } from '../repositories/user.repository';
 
-const userRepo = new UsersRepository();
+const userRepo = new UserRepository();
 
 // Endpoint to retrieve all users from the database
 export const getUsers = (req, res) => {

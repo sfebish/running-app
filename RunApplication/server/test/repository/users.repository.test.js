@@ -1,6 +1,6 @@
-﻿import { UsersRepository } from '../../repositories/users.repository';
+﻿import { UserRepository } from '../../repositories/user.repository';
 
-const usersRepo = new UsersRepository();
+const usersRepo = new UserRepository();
 suite('Users Repository Tests', sinon.test(function() {
     suiteSetup(function() {
         // called before this suite is run
