@@ -8,7 +8,8 @@ import { HomePageComponent } from './home.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import {EntityService} from './entity.service';
+import { EntityService } from './entity.service';
+import { LoggerService} from './logger.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatMenuModule, MatToolbarModule, MatIconModule, MatListModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatSidenavModule} from '@angular/material';
@@ -45,7 +46,8 @@ import { BlogComponent } from './blog/blog.component';
     UsersComponentDialog
   ],
   providers: [
-    EntityService
+    EntityService,
+    LoggerService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { EntityService } from '../entity.service';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({

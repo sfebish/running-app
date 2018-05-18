@@ -1,6 +1,6 @@
 ﻿import express from 'express';
 
-// import user operations 
+// import user service 
 import * as userService from '../services/users.service';
 
 // get an instance of express router

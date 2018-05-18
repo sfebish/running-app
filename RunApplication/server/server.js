@@ -14,6 +14,7 @@ logger.info('Starting Server...');
 
 // Routes
 import userRouter from './routes/users';
+import logRouter from './routes/logs';
 
 const app = express();
 
@@ -46,6 +47,7 @@ const port = process.env.PORT || 8080;
 SourceMapSupport.install();
 
 app.use('/api/users', userRouter);
+app.use('/api/logs', logRouter);
 
 app.get('/', (req, res) => {
     res.end('API Working');

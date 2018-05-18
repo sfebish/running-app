@@ -10,6 +10,7 @@
     <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
     <ToolsVersionPromptShown>0.0</ToolsVersionPromptShown>
     <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -17,7 +18,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a9e76d3a-8b0d-4271-8abb-d74c3420a068</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>server_Hooked.js</StartupFile>
+    <StartupFile>node_server\server_Hooked.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -36,49 +37,23 @@
   <ItemGroup>
     <Compile Include="app\karma.conf.js" />
     <Compile Include="app\protractor.conf.js" />
-    <Compile Include="models\user.model.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="repositories\base.repository.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="repositories\users.repository.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="server.js" />
-    <Compile Include="routes\users.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="server\customLogger.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="server\databaseConnection.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="server_Hooked.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="services\express.helpers.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="services\users.service.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test\hooks.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test\repository\users.repository.test.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test\test.helpers.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="tools\testRunner.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="tools\testRunner_hooked.js">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="server\models\user.model.js" />
+    <Compile Include="server\repositories\base.repository.js" />
+    <Compile Include="server\repositories\users.repository.js" />
+    <Compile Include="server\routes\logs.js" />
+    <Compile Include="server\routes\users.js" />
+    <Compile Include="server\server.js" />
+    <Compile Include="server\server\customLogger.js" />
+    <Compile Include="server\server\databaseConnection.js" />
+    <Compile Include="server\server_Hooked.js" />
+    <Compile Include="server\services\express.helpers.js" />
+    <Compile Include="server\services\logs.service.js" />
+    <Compile Include="server\services\users.service.js" />
+    <Compile Include="server\test\hooks.js" />
+    <Compile Include="server\test\repository\users.repository.test.js" />
+    <Compile Include="server\test\test.helpers.js" />
+    <Compile Include="server\tools\testRunner.js" />
+    <Compile Include="server\tools\testRunner_hooked.js" />
     <Content Include="app\.angular-cli.json" />
     <Content Include="app\.editorconfig" />
     <Content Include="app\.gitignore" />
@@ -110,7 +85,8 @@
     <Content Include="app\src\tsconfig.spec.json" />
     <Content Include="app\tsconfig.json" />
     <Content Include="app\tslint.json" />
-    <Content Include="package.json" />
+    <Content Include="server\package.json" />
+    <Content Include="server\server\runLog.log" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -122,16 +98,17 @@
     <Folder Include="app\src\app\users\" />
     <Folder Include="app\src\assets\" />
     <Folder Include="app\src\environments\" />
-    <Folder Include="models\" />
-    <Folder Include="test\" />
-    <Folder Include="test\repository\" />
-    <Folder Include="tools\" />
-    <Folder Include="repositories\" />
-    <Folder Include="services\" />
     <Folder Include="server\" />
-    <Folder Include="public\" />
-    <Folder Include="routes\" />
-    <Folder Include="views\" />
+    <Folder Include="server\models\" />
+    <Folder Include="server\public\" />
+    <Folder Include="server\repositories\" />
+    <Folder Include="server\routes\" />
+    <Folder Include="server\server\" />
+    <Folder Include="server\services\" />
+    <Folder Include="server\test\" />
+    <Folder Include="server\test\repository\" />
+    <Folder Include="server\tools\" />
+    <Folder Include="server\views\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\e2e\app.e2e-spec.ts" />
@@ -145,6 +122,8 @@
     <TypeScriptCompile Include="app\src\app\entity.service.spec.ts" />
     <TypeScriptCompile Include="app\src\app\entity.service.ts" />
     <TypeScriptCompile Include="app\src\app\home.component.ts" />
+    <TypeScriptCompile Include="app\src\app\logger.service.spec.ts" />
+    <TypeScriptCompile Include="app\src\app\logger.service.ts" />
     <TypeScriptCompile Include="app\src\app\runs\runs.component.spec.ts" />
     <TypeScriptCompile Include="app\src\app\runs\runs.component.ts" />
     <TypeScriptCompile Include="app\src\app\users\users.component.spec.ts" />

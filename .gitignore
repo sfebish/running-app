@@ -234,7 +234,7 @@ FakesAssemblies/
 
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
-RunApplication/node_modules/
+RunApplication/server/node_modules/
 RunApplication/app/node_modules/
 
 # Typescript v1 declaration files
@@ -288,4 +288,4 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-RunApplication/logs/*
+RunApplication/server/logs/*
